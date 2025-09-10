@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/Footer.svelte'
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -9,3 +10,5 @@
 </svelte:head>
 
 {@render children?.()}
+
+<Footer />
