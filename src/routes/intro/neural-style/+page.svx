@@ -1,5 +1,6 @@
 ---
 title: "Neural Style!"
+description: "Neuronaler Stiltransfer am Beispiel einer Graphic Novel"
 # thumbnail: "/thumbnails/projekt1.jpg"
 order: 3
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Einführung"
+description: "Willkommen zu Artificial Impasto! Hier erfährst du, wie du KI-gestützte Kunstwerke erstellen kannst."
 order: 5
 ---
 
