@@ -1,0 +1,7 @@
+---
+title: "Methode"
+# thumbnail: "/thumbnails/projekt1.jpg"
+order: 1
+---
+
+# Methode

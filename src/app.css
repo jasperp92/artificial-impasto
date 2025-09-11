@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Terminal Grotesque";
+  src: url("/fonts/terminal-grotesque.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Terminal Grotesque Open";
+  src: url("/fonts/terminal-grotesque_open.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-family: "Basic", sans-serif;
+    font-weight: 200;
+  }
+  body {
+    @apply bg-zinc-100 dark:bg-zinc-950 dark:text-white;
+  }
+  h1 {
+    @apply text-8xl;
+    font-family: "Terminal Grotesque Open", sans-serif;
+  }
+  h2 {
+    @apply text-6xl;
+    font-family: "Terminal Grotesque", sans-serif;
+  }
+  h3 { @apply text-3xl; }
+  p  { @apply leading-relaxed; }
+  p a  { @apply underline; }
+  ol { @apply list-decimal list-inside; }
+  .footnotes {
+    @apply mt-8 border-t border-gray-300 pt-4 text-sm text-gray-300;
+  }
+  .footnotes ol {
+    @apply list-decimal ml-6 space-y-2;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+  .footnotes a { @apply text-blue-500 hover:underline; }
+  .footnotes h2, .footnotes .data-footnote-backref { display: none; }
+
+  .font-tg  { font-family: "Terminal Grotesque", sans-serif; }
+  .font-tgo { font-family: "Terminal Grotesque Open", sans-serif; }
+}
+
+/* Tabellen-Styling */
+table {
+  @apply table-auto border-collapse w-full text-left text-sm;
+}
+
+table thead th {
+  @apply px-2 py-2 border-b border-gray-300 border-r border-gray-200 font-semibold;
+}
+table thead th:last-child { @apply border-r-0; }
+
+table tbody td {
+  @apply px-2 py-2 border-b border-gray-200 border-r border-gray-200;
+}
+table tbody td:last-child { @apply border-r-0; }
+table tbody tr:last-child td { @apply border-b-0; }
+
+/* Mobile collapse */
+@media (max-width: 640px) {
+  table, thead, tbody, th, td, tr { @apply block w-full; }
+  thead { @apply hidden; }
+  tr { @apply mb-4 rounded-lg p-3 border border-gray-100; }
+  td { @apply border-none px-2 py-2 text-sm block text-left; }
+  td::before {
+    content: attr(data-label) ":";
+    @apply font-semibold mr-2 text-gray-100;
+  }
+}

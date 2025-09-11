@@ -1,0 +1,17 @@
+---
+title: "Einführung"
+order: 5
+---
+
+<script lang="ts">
+    import NavigationGrid from "$lib/components/NavigationGrid.svelte"
+</script>
+
+
+# Einfürhung
+
+Hier kommt die Einführung rein.
+
+
+
+<!-- <NavigationGrid pages={childrenPages} /> -->
